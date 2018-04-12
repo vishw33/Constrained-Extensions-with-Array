@@ -127,18 +127,31 @@ personArray.map{print("Person-Post :- \($0.age)")}
 
 
 let numArray = [1,2,3,4,5,6]
-print(type(of: numArray))
-let val = numArray.sum()
-let str = numArray.string()
+print("numArrayType = \(type(of: numArray))")
+let sumValue = numArray.sum()
+let convertedStringArray = numArray.string()
+print("val = \(sumValue)")
+print("convertedStringArray = \(convertedStringArray)")
+print("convertedStringArrayType = \(type(of: convertedStringArray))")
 
 
 let arrayString:[String] = ["The Godfather", "The Shawshank Redemption" , "Schindler's List" , "Raging Bull" , "Gone with the Wind" , "The Wizard of Oz" , "Lawrence of Arabia" , "Forrest Gump"]
 let characterCount = arrayString.totalCharacterCount()
 let wordCount = arrayString.wordCount()
 let eachCharacterCount = arrayString.elementCharacterCount()
+print("characterCount = \(characterCount)")
+print("wordCount = \(wordCount)")
+print("eachCharacterCount = \(eachCharacterCount)")
+
 
 let randomNumbers:[Int] = [1 ,3,45,6743,4673,435,4162,6657,2431,658,686,56,3456,8875,325,46,2,66537,6,0]
 let greaterThanArray = randomNumbers.sorted(by: >)
 let lesserThanArray = randomNumbers.sorted(by: <)
 print(greaterThanArray)
 print(lesserThanArray)
+
+let stringArray = ["Vishwas" ,"Palindrome" , "Rat"]
+let char:[Character] = stringArray.flatMap{Array($0)}
+let repeatDict = char.characterCount()
+print(repeatDict)
+
